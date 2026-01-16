@@ -20,6 +20,12 @@
         h1 { margin-bottom: 5px; font-weight: 300; letter-spacing: 1px; }
         p { color: #888; margin-bottom: 30px; font-size: 0.9em; }
         
+        /* Larger font style for the driver name */
+        .driver-info {
+            font-size: 1.3em; /* Increased size */
+            color: #ddd;      /* Brighter white/grey for readability */
+        }
+        
         .card {
             background-color: #1e1e1e;
             width: 100%;
@@ -58,28 +64,36 @@
         }
         #paynow-box img { width: 100%; }
 
-        .footer { margin-top: 30px; font-size: 0.8em; color: #555; }
+        /* Updated Footer Color to White */
+        .footer { margin-top: 30px; font-size: 0.8em; color: #ffffff; }
     </style>
 </head>
 <body>
 
     <div class="card">
+        <!-- Your Photo or Icon could go here -->
         <h1>Welcome Aboard</h1>
-        <p>Your Driver: <strong>Irman</strong></p>
+        <p class="driver-info">Your Driver: <strong>Irman</strong></p>
 
+        <!-- BUTTON 1: MUSIC -->
+        <!-- Opens WhatsApp directly to your phone -->
         <a href="https://wa.me/6582221280?text=Hi%20Irman,%20I%20would%20like%20to%20request%20a%20song:%20" class="btn btn-music">
             🎵 Request a Song
         </a>
 
+        <!-- BUTTON 2: TIP (JavaScript expands the box) -->
         <a href="#" onclick="toggleTip()" class="btn btn-tip">
             💸 Leave a Tip
         </a>
 
+        <!-- The Hidden PayNow QR -->
         <div id="paynow-box">
             <p style="color:black; margin-bottom:5px;">Scan with PayNow / PayLah</p>
+            <!-- This links to the image you uploaded -->
             <img src="paynow.jpg" alt="PayNow QR">
         </div>
 
+        <!-- BUTTON 3: RATE -->
         <a href="#" class="btn btn-rate">
             ⭐ Don't forget to Rate!
         </a>
