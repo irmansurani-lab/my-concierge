@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Concierge</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark Mode Background */
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+        }
+        h1 { margin-bottom: 5px; font-weight: 300; letter-spacing: 1px; }
+        p { color: #888; margin-bottom: 30px; font-size: 0.9em; }
+        
+        .card {
+            background-color: #1e1e1e;
+            width: 100%;
+            max-width: 350px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s;
+            box-sizing: border-box;
+        }
+        .btn:active { transform: scale(0.98); }
+
+        /* Button Colors */
+        .btn-music { background-color: #1DB954; color: white; } /* Spotify Green */
+        .btn-tip { background-color: #FFD700; color: black; }   /* Gold */
+        .btn-rate { background-color: #333; color: white; border: 1px solid #555; }
+
+        /* Hidden PayNow Section */
+        #paynow-box {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #paynow-box img { width: 100%; }
+
+        .footer { margin-top: 30px; font-size: 0.8em; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Welcome Aboard</h1>
+        <p>Your Driver: <strong>Irman</strong></p>
+
+        <a href="https://wa.me/6582221280?text=Hi%20Irman,%20I%20would%20like%20to%20request%20a%20song:%20" class="btn btn-music">
+            🎵 Request a Song
+        </a>
+
+        <a href="#" onclick="toggleTip()" class="btn btn-tip">
+            💸 Leave a Tip
+        </a>
+
+        <div id="paynow-box">
+            <p style="color:black; margin-bottom:5px;">Scan with PayNow / PayLah</p>
+            <img src="paynow.png" alt="PayNow QR">
+        </div>
+
+        <a href="#" class="btn btn-rate">
+            ⭐ Don't forget to Rate!
+        </a>
+    </div>
+
+    <div class="footer">
+        Enjoy the ride in the Toyota Noah.<br>
+        WiFi & Charging available upon request.
+    </div>
+
+    <script>
+        function toggleTip() {
+            var x = document.getElementById("paynow-box");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
